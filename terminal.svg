@@ -189,7 +189,7 @@
         <text x="0" y="52" class="terminal-text"><tspan class="green">Host</tspan><tspan class="white">: Offensive &amp; Defensive Node</tspan></text>
         <text x="0" y="66" class="terminal-text"><tspan class="green">Kernel</tspan><tspan class="white">: Linux 6.1.12-ethical-hacking</tspan></text>
         <text x="0" y="80" class="terminal-text"><tspan class="green">Shell</tspan><tspan class="white">: zsh 5.9 (hacker-theme)</tspan></text>
-        <text x="0" y="94" class="terminal-text"><tspan class="green">Focus</tspan><tspan class="white">: Bug Hunting / Web App Pentesting / VAPT</tspan></text>
+        <text x="0" y="94" class="terminal-text"><tspan class="green">Focus</tspan><tspan class="white">: CyberSecurity Researcher / Web App Pentesting / VAPT</tspan></text>
         <text x="0" y="108" class="terminal-text"><tspan class="green">Ranks</tspan><tspan class="white">: TryHackMe Top 3% | Bugcrowd P5</tspan></text>
         
         <!-- Palette blocks -->
