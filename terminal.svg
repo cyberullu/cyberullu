@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" fill="none">
+  <defs>
+    <!-- CRT scanlines pattern -->
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1.5" fill="#000000" opacity="0.4" />
+    </pattern>
+
+    <!-- Neon Glow Filter -->
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Clip Paths for Typewriter effect -->
+    <clipPath id="clip-cmd1">
+      <rect x="185" y="0" width="0" height="25">
+        <animate attributeName="width" values="0; 330; 330; 0" keyTimes="0; 0.1; 0.95; 1" dur="10s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <clipPath id="clip-cmd2">
+      <rect x="185" y="130" width="0" height="25">
+        <animate attributeName="width" values="0; 0; 80; 80; 0" keyTimes="0; 0.38; 0.44; 0.95; 1" dur="10s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+  </defs>
+
+  <style>
+    .terminal-text {
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .green { fill: #00FF66; }
+    .green-glow { fill: #00FF66; filter: url(#glow); }
+    .dim-green { fill: #00AA44; }
+    .white { fill: #FFFFFF; }
+    .gray { fill: #666666; }
+    .blue { fill: #0088FF; }
+    
+    /* Timed Fading Animations for Responses */
+    .fade-resp1 {
+      opacity: 0;
+      animation: fadeInOut 10s step-end infinite;
+    }
+    .fade-resp2 {
+      opacity: 0;
+      animation: fadeInOut2 10s step-end infinite;
+    }
+    .fade-resp3 {
+      opacity: 0;
+      animation: fadeInOut3 10s step-end infinite;
+    }
+    .fade-resp4 {
+      opacity: 0;
+      animation: fadeInOut4 10s step-end infinite;
+    }
+    .fade-neofetch {
+      opacity: 0;
+      animation: fadeInOutNF 10s step-end infinite;
+    }
+
+    @keyframes fadeInOut {
+      0%, 11% { opacity: 0; }
+      12%, 95% { opacity: 1; }
+      96%, 100% { opacity: 0; }
+    }
+    @keyframes fadeInOut2 {
+      0%, 16% { opacity: 0; }
+      17%, 95% { opacity: 1; }
+      96%, 100% { opacity: 0; }
+    }
+    @keyframes fadeInOut3 {
+      0%, 21% { opacity: 0; }
+      22%, 95% { opacity: 1; }
+      96%, 100% { opacity: 0; }
+    }
+    @keyframes fadeInOut4 {
+      0%, 26% { opacity: 0; }
+      27%, 95% { opacity: 1; }
+      96%, 100% { opacity: 0; }
+    }
+    @keyframes fadeInOutNF {
+      0%, 46% { opacity: 0; }
+      47%, 95% { opacity: 1; }
+      96%, 100% { opacity: 0; }
+    }
+  </style>
+
+  <!-- Terminal Window Background -->
+  <rect width="100%" height="100%" rx="8" fill="#050505" stroke="#00FF66" stroke-width="1.5" style="filter: drop-shadow(0px 0px 12px rgba(0, 255, 102, 0.2));"/>
+
+  <!-- Title Bar -->
+  <path d="M 1.5,8 A 6.5,6.5 0 0 1 8,1.5 L 792,1.5 A 6.5,6.5 0 0 1 798.5,8 L 798.5,32 L 1.5,32 Z" fill="#111111" stroke="#00FF66" stroke-width="1.5"/>
+  
+  <!-- Window Control Buttons -->
+  <circle cx="20" cy="17" r="6" fill="#ff5f56" />
+  <circle cx="40" cy="17" r="6" fill="#ffbd2e" />
+  <circle cx="60" cy="17" r="6" fill="#27c93f" />
+  
+  <!-- Window Title -->
+  <text x="400" y="21" class="terminal-text gray" text-anchor="middle">cyberullu@security-ops:~</text>
+
+  <!-- Moving Laser Scanline -->
+  <line x1="1.5" y1="32" x2="798.5" y2="32" stroke="#00FF66" stroke-width="1" opacity="0.12">
+    <animate attributeName="y1" values="32; 398; 32" dur="6s" repeatCount="indefinite" />
+    <animate attributeName="y2" values="32; 398; 32" dur="6s" repeatCount="indefinite" />
+  </line>
+
+  <!-- Terminal Body Content -->
+  <g transform="translate(25, 50)">
+    
+    <!-- COMMAND 1 Prompt -->
+    <g transform="translate(0, 15)">
+      <text x="0" y="12" class="terminal-text">
+        <tspan class="green">cyberullu@node-01</tspan><tspan class="white">:</tspan><tspan class="blue">~</tspan><tspan class="white">$ </tspan>
+      </text>
+      <!-- Command text clipped for typewriter effect -->
+      <text x="185" y="12" class="terminal-text white" clip-path="url(#clip-cmd1)">nmap -sV -T4 -p22,80,443 local-profile.sec</text>
+      
+      <!-- Blinking Cursor 1 -->
+      <rect x="520" y="0" width="8" height="14" fill="#00FF66">
+        <animate attributeName="opacity" values="1;0;1;0;1;0;0;0" keyTimes="0;0.02;0.04;0.06;0.08;0.1;0.12;1" dur="10s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- NMAP SCAN RESPONSES -->
+    <!-- Line 1 -->
+    <g transform="translate(0, 45)" class="fade-resp1">
+      <text x="0" y="12" class="terminal-text dim-green">Starting Nmap 9.00 ( https://nmap.org ) at 2026-07-09</text>
+    </g>
+    <!-- Line 2 -->
+    <g transform="translate(0, 63)" class="fade-resp2">
+      <text x="0" y="12" class="terminal-text dim-green">Nmap scan report for local-profile.sec (127.0.0.1)</text>
+    </g>
+    <!-- Line 3 -->
+    <g transform="translate(0, 81)" class="fade-resp3">
+      <text x="0" y="12" class="terminal-text dim-green">PORT     STATE SERVICE VERSION</text>
+    </g>
+    <!-- Line 4 -->
+    <g transform="translate(0, 99)" class="fade-resp4">
+      <text x="0" y="12" class="terminal-text dim-green">
+        <tspan class="white">22/tcp   open  ssh     </tspan><tspan class="green">OpenSSH 8.4p1 (Security Audit: Secure)</tspan>
+      </text>
+      <text x="0" y="28" class="terminal-text dim-green">
+        <tspan class="white">80/tcp   open  http    </tspan><tspan class="green">Apache httpd 2.4 (Status: Active)</tspan>
+      </text>
+    </g>
+
+    <!-- COMMAND 2 Prompt -->
+    <g transform="translate(0, 145)">
+      <text x="0" y="12" class="terminal-text">
+        <tspan class="green">cyberullu@node-01</tspan><tspan class="white">:</tspan><tspan class="blue">~</tspan><tspan class="white">$ </tspan>
+      </text>
+      <!-- Command text clipped for typewriter effect -->
+      <text x="185" y="12" class="terminal-text white" clip-path="url(#clip-cmd2)">neofetch</text>
+      
+      <!-- Blinking Cursor 2 -->
+      <rect x="265" y="0" width="8" height="14" fill="#00FF66">
+        <animate attributeName="opacity" values="0;0;1;0;1;0;1;0;0" keyTimes="0;0.36;0.38;0.4;0.42;0.44;0.46;0.48;1" dur="10s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- NEOFETCH CONTENT -->
+    <g transform="translate(0, 175)" class="fade-neofetch">
+      <!-- Cyber Shield Security Vector Graphic -->
+      <g transform="translate(15, 0)">
+        <!-- Outer Glowing Shield -->
+        <path d="M 50,0 Q 80,10 95,25 Q 95,65 50,95 Q 5,65 5,25 Q 20,10 50,0 Z" fill="none" stroke="#00FF66" stroke-width="2.5" style="filter: drop-shadow(0px 0px 6px #00FF66);"/>
+        <!-- Inner Details -->
+        <path d="M 50,12 L 50,83 M 18,33 L 82,33 M 20,53 L 80,53" stroke="#00FF66" stroke-width="1" stroke-opacity="0.35"/>
+        <circle cx="50" cy="43" r="14" fill="#050505" stroke="#00FF66" stroke-width="1.5" style="filter: drop-shadow(0px 0px 4px #00FF66);"/>
+        <path d="M 44,43 L 48,47 L 56,39" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Cyber Nodes -->
+        <circle cx="50" cy="12" r="2.5" fill="#00FF66"/>
+        <circle cx="50" cy="83" r="2.5" fill="#00FF66"/>
+        <circle cx="18" cy="33" r="2.5" fill="#00FF66"/>
+        <circle cx="82" cy="33" r="2.5" fill="#00FF66"/>
+      </g>
+
+      <!-- System Stats -->
+      <g transform="translate(160, 0)">
+        <text x="0" y="12" class="terminal-text green" font-weight="bold">midhun@cyberullu.github.io</text>
+        <text x="0" y="24" class="terminal-text gray">--------------------------------</text>
+        <text x="0" y="38" class="terminal-text"><tspan class="green">OS</tspan><tspan class="white">: CyberOS v3.5 (x86_64)</tspan></text>
+        <text x="0" y="52" class="terminal-text"><tspan class="green">Host</tspan><tspan class="white">: Offensive &amp; Defensive Node</tspan></text>
+        <text x="0" y="66" class="terminal-text"><tspan class="green">Kernel</tspan><tspan class="white">: Linux 6.1.12-ethical-hacking</tspan></text>
+        <text x="0" y="80" class="terminal-text"><tspan class="green">Shell</tspan><tspan class="white">: zsh 5.9 (hacker-theme)</tspan></text>
+        <text x="0" y="94" class="terminal-text"><tspan class="green">Focus</tspan><tspan class="white">: Bug Hunting / Web App Pentesting / VAPT</tspan></text>
+        <text x="0" y="108" class="terminal-text"><tspan class="green">Ranks</tspan><tspan class="white">: TryHackMe Top 3% | Bugcrowd P5</tspan></text>
+        
+        <!-- Palette blocks -->
+        <g transform="translate(0, 122)">
+          <rect x="0" y="0" width="16" height="10" fill="#111111" stroke="#333333" stroke-width="0.5"/>
+          <rect x="22" y="0" width="16" height="10" fill="#FF3366"/>
+          <rect x="44" y="0" width="16" height="10" fill="#00FF66"/>
+          <rect x="66" y="0" width="16" height="10" fill="#FFCC00"/>
+          <rect x="88" y="0" width="16" height="10" fill="#0088FF"/>
+          <rect x="110" y="0" width="16" height="10" fill="#FF00FF"/>
+          <rect x="132" y="0" width="16" height="10" fill="#00FFFF"/>
+          <rect x="154" y="0" width="16" height="10" fill="#FFFFFF"/>
+        </g>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- Overlay Scanline Texture -->
+  <rect x="1.5" y="32" width="797" height="366" fill="url(#scanlines)" pointer-events="none" />
+</svg>
