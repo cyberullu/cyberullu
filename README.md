@@ -44,14 +44,14 @@ building practical tools that make digital systems safer.</code></pre>
 
 <font color="#00ff66">
 
-<h3>visitor@cyberullu-desktop:~$ cat about_me.md</h3>
+<h3>visitor@home/cyberullu/desktop:~$ cat about_me.md</h3>
 
 <pre><code>[+] Name       : Midhun Subhash
 [+] Role       : Bug Hunter | Cybersecurity Consultant | Cybersecurity Researcher
 [+] Focus      : VAPT, Ethical Hacking, Vulnerability Research
 [+] Mindset    : Break ethically. Learn deeply. Report clearly. Harden systems.</code></pre>
 
-<h3>visitor@cyberullu-desktop:~$ ls -la ./projects/</h3>
+<h3>visitor@home/cyberullu/desktop:~$ ls -la ./projects/</h3>
 
 <pre><code>drwxr-xr-x  phishing-link-catcher   Chrome extension for real-time malicious URL detection
 drwxr-xr-x  packet-sniffer-tool      Network traffic capture and packet-level analysis
@@ -90,7 +90,7 @@ drwxr-xr-x  password-checker         Password strength assessment and security g
   </tbody>
 </table>
 
-<h3>visitor@cyberullu-desktop:~$ ./view_experience.sh --latest</h3>
+<h3>visitor@home/cyberullu/desktop:~$ ./view_experience.sh --latest</h3>
 
 <pre><code>[Jan 2025 - Jun 2025] WizardLegal
   -> Junior Cybersecurity Analyst
@@ -101,7 +101,7 @@ drwxr-xr-x  password-checker         Password strength assessment and security g
   -> Cyber Security Intern
   -> Built offensive and defensive security tools while completing assigned tasks</code></pre>
 
-<h3>visitor@cyberullu-desktop:~$ ./run_methodology.py</h3>
+<h3>visitor@home/cyberullu/desktop:~$ ./run_methodology.py</h3>
 
 <pre><code>[01] Reconnaissance
 [02] Vulnerability Assessment
@@ -112,7 +112,7 @@ drwxr-xr-x  password-checker         Password strength assessment and security g
 [07] Vulnerability Report Generation
 [08] Remediation Guidance</code></pre>
 
-<h3>visitor@cyberullu-desktop:~$ cat achievements.log</h3>
+<h3>visitor@home/cyberullu/desktop:~$ cat achievements.log</h3>
 
 <pre><code>[*] Top 3% worldwide ranking on TryHackMe
 [*] P5 level information for bug hunting in Bugcrowd
@@ -122,7 +122,7 @@ drwxr-xr-x  password-checker         Password strength assessment and security g
 [*] Conducted and participated in 50+ CTF competitions
 [*] Earned multiple TryHackMe learning-path certifications</code></pre>
 
-<h3>visitor@cyberullu-desktop:~$ neofetch --github-stats</h3>
+<h3>visitor@home/cyberullu/desktop:~$ neofetch --github-stats</h3>
 
 </font>
 
@@ -138,7 +138,7 @@ drwxr-xr-x  password-checker         Password strength assessment and security g
 
 <font color="#00ff66">
 
-<h3>visitor@cyberullu-desktop:~$ ./render_contribution_graph.sh</h3>
+<h3>visitor@home/cyberullu/desktop:~$ ./render_contribution_graph.sh</h3>
 
 </font>
 
@@ -157,7 +157,7 @@ drwxr-xr-x  password-checker         Password strength assessment and security g
 
 <font color="#00ff66">
 
-<h3>visitor@cyberullu-desktop:~$ ./get_contact_info.py</h3>
+<h3>visitor@home/cyberullu/desktop:~$ ./get_contact_info.py</h3>
 
 <pre><code>Portfolio : https://midhun-subhash-portfolio.netlify.app/
 GitHub    : https://github.com/cyberullu
