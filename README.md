@@ -18,7 +18,7 @@
 
 <font color="#00ff66">
 
-<h3>visitor@cyberullu-desktop:~$ whoami</h3>
+<h3>visitor@home/cyberullu/desktop:~$ whoami</h3>
 
 <pre><code>Cyber security enthusiast, bug hunter, security researcher, and VAPT learner
 focused on ethical hacking, penetration testing, vulnerability research, and
